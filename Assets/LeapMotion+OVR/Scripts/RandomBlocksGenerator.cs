@@ -53,6 +53,7 @@ public class RandomBlocksGenerator : MonoBehaviour {
     sphere.transform.parent = transform;
     sphere.transform.localScale = Vector3.one * (maxRadius + size * 2.0f) * 2.0f;
     sphere.transform.localPosition = Vector3.zero;
+
     Mesh sphereMesh = sphere.GetComponent<MeshFilter>().mesh;
     sphereMesh.triangles = sphereMesh.triangles.Reverse().ToArray();
     sphereMesh.RecalculateNormals();

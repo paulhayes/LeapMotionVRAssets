@@ -10,7 +10,7 @@ public class MovementManager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
     if (leapMotionOVRController == null || handController == null)
       return;
 
