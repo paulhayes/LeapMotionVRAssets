@@ -318,7 +318,8 @@ public class OVRManager : MonoBehaviour
 		}
 
 		instance = this;
-
+		
+		
 #if !UNITY_ANDROID || UNITY_EDITOR
 		var netVersion = new System.Version(Ovr.Hmd.OVR_VERSION_STRING);
 		var ovrVersion = new System.Version(Ovr.Hmd.GetVersionString());
@@ -370,7 +371,7 @@ public class OVRManager : MonoBehaviour
 			display = new OVRDisplay();
 		if (tracker == null)
 			tracker = new OVRTracker();
-
+			tracker.isEnabled = usingPositionTracking = usePositionTracking;
 		if (resetTrackerOnLoad)
 			display.RecenterPose();
 
